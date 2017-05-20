@@ -49,6 +49,7 @@ const ConversationItem = React.createClass({
     const tones = this.props.utterance.tones;
 
     return (
+      <div>
       <div className={user.type === 'customer' ? 'speaker consumer' : 'speaker'}>
         <div className="avatar">
           <div className={user.type === 'customer' ? 'customer_avatar' : 'agent_avatar'} />
@@ -106,8 +107,13 @@ const ConversationItem = React.createClass({
                 />
               </div>
             ))}
+            <div className="other_tones"><a className="base--a jumbotron--nav-link" href="#">What other tones...?</a></div>
         </div>
       </div>
+      <div className="speaker hidden">
+        <span className="description"> What other tones do you think are in this staement?</span>
+      </div>
+    </div>
     );
   },
 });
