@@ -24,4 +24,4 @@ deploy:
     repo: watson-developer-cloud/customer-engagement-nodejs
   skip_cleanup: true
 notifications:
-  email: false
+  email: awebster@us.ibm.com
