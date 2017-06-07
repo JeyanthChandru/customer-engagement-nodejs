@@ -18,7 +18,6 @@ const Demo = React.createClass({
   * The initial state for the conversation is stored in a json file
   */
   getInitialState() {
-    console.log('getInitialState called');
     const initialLastUtterance = initialConversation.utterances[initialConversation.utterances.length - 1];
     return {
       conversation: JSON.parse(initialConversationString),

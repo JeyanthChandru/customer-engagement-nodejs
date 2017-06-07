@@ -42,7 +42,6 @@ const ConversationItem = React.createClass({
       },
       tone_analyzer_payload: this.props.utterance.tone_analyzer_payload,
     };
-    console.log('voted: '.concat(JSON.stringify(voteData)));
     this.props.onVote.call(this, voteData, source);
   },
 
@@ -50,8 +49,6 @@ const ConversationItem = React.createClass({
     const user = this.props.utterance.user;
     const statement = this.props.utterance.statement;
     const tones = this.props.utterance.tones;
-
-    console.log('conversationitem isResetting: '.concat(this.props.isResetting));
 
     return (
       <div className={user.type === 'customer' ? 'speaker consumer' : 'speaker'}>
